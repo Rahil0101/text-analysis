@@ -9,6 +9,7 @@ import spacy
 import nltk
 import subprocess
 import sys
+import os
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
