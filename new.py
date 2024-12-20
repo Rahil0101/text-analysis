@@ -11,10 +11,16 @@ import subprocess
 import sys
 nltk.download('punkt')
 nltk.download('punkt_tab')
-spacy.download('en_core_web_sm')
+
 
 # Load spaCy model for NER and POS
-tnlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    model_dir = '/home/adminuser/venv/lib/python3.12/site-packages/en_core_web_sm'
+    os.makedirs(model_dir, exist_ok=True)
+    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"], check=True)
+    nlp = spacy.load("en_core_web_sm")
 
 
 # Function to extract text from PDF
