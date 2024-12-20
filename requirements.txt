@@ -2,4 +2,3 @@ PyPDF2
 spacy
 transformers
 nltk
-re
