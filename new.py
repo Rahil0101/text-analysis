@@ -13,13 +13,8 @@ nltk.download('punkt')
 nltk.download('punkt_tab')
 
 # Load spaCy model for NER and POS
-try:
-    spacy.load("en_core_web_sm")
-    tnlp = spacy.load("en_core_web_sm")
-    
-except OSError:
-    subprocess.run(["spacy", "download", "en_core_web_sm"])
-    tnlp = spacy.load("en_core_web_sm")
+subprocess.run(["spacy", "download", "en_core_web_sm"])
+tnlp = spacy.load("en_core_web_sm")
 
 # Function to extract text from PDF
 def extract_text_from_pdf(file):
