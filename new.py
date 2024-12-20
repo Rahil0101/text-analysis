@@ -18,7 +18,7 @@ try:
     tnlp = spacy.load("en_core_web_sm")
     
 except OSError:
-    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"], check=True)
+    subprocess.run(["spacy", "download", "en_core_web_sm"])
     tnlp = spacy.load("en_core_web_sm")
 
 # Function to extract text from PDF
