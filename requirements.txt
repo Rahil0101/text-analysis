@@ -2,4 +2,5 @@ PyPDF2
 spacy
 transformers
 nltk
-spacy en_core_web_sm 
+spacy 
+en_core_web_sm 
