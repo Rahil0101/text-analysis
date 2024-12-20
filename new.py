@@ -7,6 +7,8 @@ import textwrap
 import re
 import spacy
 import nltk
+import subprocess
+import sys
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
