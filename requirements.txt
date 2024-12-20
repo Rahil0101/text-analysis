@@ -1,0 +1,6 @@
+PyPDF2
+spacy
+transformers
+nltk
+textwrap
+re
